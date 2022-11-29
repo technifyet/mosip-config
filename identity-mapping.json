@@ -3,8 +3,14 @@
 		"IDSchemaVersion": {
 			"value": "IDSchemaVersion"
 		},
-		"name": {
-			"value": "fullName"
+		"firstName": {
+			"value": "firstName"
+		},
+		"middleName": {
+			"value": "middleName"
+		},
+		"lastName": {
+			"value": "lastName"
 		},
 		"gender": {
 			"value": "gender"
@@ -69,32 +75,26 @@
 		"locationHierarchyForProfiling": {
 			"value": "zone,postalCode"
 		},
-		"addressLine1": {
-			"value": "addressLine1"
+		"preAddLine1": {
+			"value": "preAddLine1"
 		},
-		"addressLine2": {
-			"value": "addressLine2"
-		},
-		"addressLine3": {
-			"value": "addressLine3"
+		"preAddLine2": {
+			"value": "preAddLine2"
 		},
 		"location1": {
-			"value": "city"
+			"value": "preProvince"
 		},
 		"location2": {
-			"value": "region"
+			"value": "preLocality"
 		},
 		"location3": {
-			"value": "province"
+			"value": "preMunicipality"
 		},
 		"postalCode": {
-			"value": "postalCode"
-		},
-		"location4": {
-			"value": "zone"
+			"value": "preZipCode"
 		},
 		"fullAddress": {
-			"value": "addressLine1,addressLine2,addressLine3,city,region,province,postalCode"
+			"value": "preAddLine1,preAddLine2,preProvince,preLocality,preMunicipality,preZipCode"
 		},
 		"bestTwoFingers": {
 			"value": "bestTwoFingers"
@@ -108,25 +108,13 @@
 	},
 	"documents": {
 		"poa": {
-			"value": "proofOfAddress"
+			"value": "proofOfResidency"
 		},
 		"poi": {
-			"value": "proofOfIdentity"
+			"value": "proofOfException"
 		},
 		"por": {
-			"value": "proofOfRelationship"
-		},
-		"pob": {
 			"value": "proofOfDateOfBirth"
-		},
-		"poe": {
-			"value": "proofOfException"
 		}
-	},
-	"attributeUpdateCountLimit": {
-		"fullName": 2,
-		"gender": 1,
-		"dob": 1,
-		"age": 1
 	}
 }
