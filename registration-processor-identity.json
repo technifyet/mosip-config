@@ -60,7 +60,7 @@
          ]
       },
       "address":{
-         "value":"addressLine1,addressLine2,addressLine3,region,province,postalCode",
+         "value":"kebele,region,zone,woreda",
          "provider":[
             "source:REGISTRATION_CLIENT,process:NEW|UPDATE|LOST",
             "source:RESIDENT,process:ACTIVATED|DEACTIVATED|RES_UPDATE|RES_REPRINT"
