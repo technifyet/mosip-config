@@ -18,7 +18,25 @@
             </otherwise>
         </choice>
     </route>
-
+    <!-- securezone-notification to packet-uploader Route -->
+    <route id="securezone-notification-->packet-uploader new route">
+        <from uri="eventbus:securezone-notification-new-bus-out" />
+        <log
+                message="securezone-notification-->packet-uploader new route ${bodyAs(String)}" />
+        <choice>
+            <when>
+                <simple>${bodyAs(String)} contains '"isValid":true'</simple>
+                <to uri="eventbus:packet-uploader-bus-in" />
+            </when>
+            <when>
+                <simple>${bodyAs(String)} contains '"internalError":true'</simple>
+                <to uri="eventbus:retry-bus-in" />
+            </when>
+            <otherwise>
+                <to uri="eventbus:error-bus-in" />
+            </otherwise>
+        </choice>
+    </route>
     <!-- packet-uploader to packet-validator Route -->
     <route id="packet-uploader-->packet-validator new route">
     <from uri="eventbus:packet-uploader-new-bus-out" />
