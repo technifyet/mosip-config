@@ -26,7 +26,7 @@
         <choice>
             <when>
                 <simple>${bodyAs(String)} contains '"isValid":true'</simple>
-                <to uri="eventbus:packet-validator-bus-in" />
+                <to uri="eventbus:packet-uploader-bus-in" />
             </when>
             <when>
                 <simple>${bodyAs(String)} contains '"internalError":true'</simple>
