@@ -79,14 +79,14 @@
             </otherwise>
         </choice>
     </route>
-    <route id="quality-checker-->osi-validator new route">
+    <route id="quality-checker-->demo-dedupe new route">
         <from uri="eventbus:quality-checker-new-bus-out" />
         <log
-            message="quality-checker-->osi-validator new route ${bodyAs(String)}" />
+            message="quality-checker-->demo-dedupe  new route ${bodyAs(String)}" />
         <choice>
             <when>
                 <simple>${bodyAs(String)} contains '"isValid":true'</simple>
-                <to uri="eventbus:o-s-i-validator-bus-in" />
+                <to uri="eventbus:demo-dedupe-bus-in" />
             </when>
             <when>
                 <simple>${bodyAs(String)} contains '"isValid":false' and ${bodyAs(String)} contains '"internalError":false'</simple>
