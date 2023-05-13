@@ -1,6 +1,7 @@
 [consolidatorService.config]
 # IP and Port of the Kafka bootstrap node
-KAFKA_BOOTSTRAP_NODE = "kafka.kafka.svc.cluster.local:9092"
+#KAFKA_BOOTSTRAP_NODE = "kafka.kafka.svc.cluster.local:9092"
+KAFKA_BOOTSTRAP_NODE = "172.18.10.27:31060"
 
 # Kafka topic which will get notified for websub topic registration/deregistration
 # All the hubs must be pointed to the same Kafka topic to notify websub topic registration/deregistration
